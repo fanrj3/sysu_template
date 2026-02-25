@@ -1,0 +1,19 @@
+\frametitle{Code Listing Example}
+\begin{lstlisting}[language=Python, caption={Training loop (simplified)}]
+import torch
+import torch.nn as nn
+
+model = MyModel(hidden_dim=256, n_layers=6)
+optimizer = torch.optim.AdamW(model.parameters(), lr=3e-4)
+criterion = nn.CrossEntropyLoss()
+
+for epoch in range(100):
+    for batch in dataloader:
+        x, y = batch
+        logits = model(x)
+        loss = criterion(logits, y)
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
+    print(f"Epoch {epoch}: loss={loss.item():.4f}")
+    \end{lstlisting}
