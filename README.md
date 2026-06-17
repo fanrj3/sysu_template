@@ -36,6 +36,19 @@ xelatex  slide.tex
 xelatex  slide.tex
 ```
 
+### VS Code
+
+Install the recommended **LaTeX Workshop** extension when VS Code prompts you.
+This repository includes workspace settings for MiKTeX on Windows:
+
+- default recipe: `XeLaTeX + Biber (full)`
+- quick recipe: `XeLaTeX (quick)`
+- auto-build: on save
+- PDF preview: opens in a VS Code tab
+- SyncTeX: double-click the PDF to jump back to source
+
+Open `slide.tex`, then use `Ctrl+Alt+B` to build and `Ctrl+Alt+V` to view the PDF.
+
 ### File Structure
 
 ```
