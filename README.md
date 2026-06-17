@@ -1,10 +1,10 @@
-# Tsinghua Beamer Presentation Template
+# sysu_template
 
-A clean, modern Beamer (LaTeX) slide template with Tsinghua University branding. Uses the **Lexend** + **Inter** font family for a Google Fonts-like aesthetic while retaining full academic functionality.
+A clean, modern Beamer (LaTeX) slide template with Sun Yat-sen University branding. Uses the **Lexend** + **Inter** font family for a Google Fonts-like aesthetic while retaining full academic functionality.
 
 ## Features
 
-- **Tsinghua Purple** colour scheme with customisable accent colours
+- **SYSU Green** colour scheme with customisable accent colours
 - Automatic **section divider** pages with decorative rules
 - **Smooth navigation bar** header (section dots) + page-number footer
 - Full **biblatex / Biber** citation support (footnote style)
@@ -41,14 +41,14 @@ xelatex  slide.tex
 ```
 template/
 ├── slide.tex           # Main presentation source
-├── Tsinghua.sty        # Beamer theme (colour / layout)
+├── SYSU.sty            # Beamer theme (colour / layout)
 ├── .latexmkrc          # latexmk config (XeLaTeX mode)
 ├── README.md           # This file
 ├── fonts/
 │   ├── Inter/          # Inter font family (.ttf/.otf)
 │   └── Lexend/         # Lexend font family (.ttf)
 ├── pic/                # Images & logos
-│   └── Tsinghua_University_Logo.eps
+│   └── sysu_logo.png
 └── ref/
     └── refs.bib        # Bibliography database
 ```
@@ -62,7 +62,7 @@ Edit the metadata block near the top of `slide.tex`:
 ```latex
 \author{Your Name}
 \title[Short Title]{Your Presentation Title}
-\institute{Tsinghua University}
+\institute{Sun Yat-sen University}
 \date{\today}
 ```
 
@@ -71,9 +71,14 @@ Edit the metadata block near the top of `slide.tex`:
 All accent colours are defined at the top of `slide.tex`:
 
 ```latex
-\definecolor{THUPurple}{RGB}{111, 23, 135}
+\definecolor{SYSUGreen}{RGB}{0, 88, 38}
+\definecolor{SYSUGreenLight}{RGB}{230, 240, 235}
+\definecolor{SYSUGreenMid}{RGB}{51, 121, 81}
+\definecolor{SYSUGreenDark}{RGB}{0, 61, 27}
 \definecolor{AccentBlue}{RGB}{0, 102, 204}
 ```
+
+`SYSUGreen` is the official primary green (`#005826`). The light, mid, and dark variants are included for gradients and low-emphasis fills, while the non-brand helper colours such as `AccentBlue`, `LightGray`, and code-listing colours are intentionally left unchanged.
 
 ### Add Your Own Figures
 
@@ -121,4 +126,4 @@ This was shown by prior work.\footfullcite{vaswani2017attention}
 
 ## License
 
-This template is provided as-is for academic use. The Tsinghua University logo is a registered trademark of Tsinghua University.
+This template is provided as-is for academic use. The Sun Yat-sen University logo is a registered trademark of Sun Yat-sen University.

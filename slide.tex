@@ -84,7 +84,10 @@
 % ===========================================================================
 \usepackage{xcolor}
 \definecolor{mycolor}{RGB}{219, 232, 251}
-\definecolor{THUPurple}{RGB}{111, 23, 135}
+\definecolor{SYSUGreen}{RGB}{0, 88, 38}
+\definecolor{SYSUGreenLight}{RGB}{230, 240, 235}
+\definecolor{SYSUGreenMid}{RGB}{51, 121, 81}
+\definecolor{SYSUGreenDark}{RGB}{0, 61, 27}
 \definecolor{AccentBlue}{RGB}{0, 102, 204}
 \definecolor{LightGray}{RGB}{245, 245, 245}
 \definecolor{DarkGray}{RGB}{80, 80, 80}
@@ -107,14 +110,14 @@
 
 % --- Fill in your info here ------------------------------------------------
 \newcommand{\authorname}{Your Name}          % <-- change this
-\newcommand{\institutename}{Tsinghua University} % <-- and this
+\newcommand{\institutename}{Sun Yat-sen University} % <-- and this
 \author[\authorname]{\authorname}
 \title[Short Title]{Your Presentation Title}
 \institute{\institutename}
 \date{\today}
 % ---------------------------------------------------------------------------
 
-\usepackage{Tsinghua}
+\usepackage{SYSU}
 
 \AtBeginSubsection[]{}
 
@@ -128,9 +131,9 @@
     \begin{frame}[plain]
       \vspace{0.8cm}
       \begin{center}
-        {\color{THUPurple}\rule{0.85\textwidth}{1.2pt}}\\[0.6cm]
+        {\color{SYSUGreen}\rule{0.85\textwidth}{1.2pt}}\\[0.6cm]
         {\LARGE\bfseries \insertsection}\\[0.45cm]
-        {\color{THUPurple}\rule{0.85\textwidth}{1.2pt}}
+        {\color{SYSUGreen}\rule{0.85\textwidth}{1.2pt}}
       \end{center}
       \vfill
       \begin{center}
@@ -213,7 +216,7 @@
   \author[\authorname]{\authorname\hspace{0.9em}\textbar\hspace{0.9em}\today}
   \institute[\institutename]{\institutename\\ Supervisor: Prof.\ Someone}
   \date{}
-  \titlegraphic{\includegraphics[width=0.18\linewidth]{Tsinghua_University_Logo.eps}}
+  \titlegraphic{\includegraphics[width=0.18\linewidth]{sysu_logo.png}}
   \begin{frame}
       \titlepage
   \end{frame}
@@ -281,9 +284,9 @@
             % TikZ inline figure — replace with your own image
             \begin{tikzpicture}[scale=0.65, every node/.style={font=\small}]
                 \node[draw, rounded corners, fill=AccentBlue!10, minimum width=2.8cm, minimum height=0.8cm] (input) {Input Data};
-                \node[draw, rounded corners, fill=THUPurple!15, minimum width=2.8cm, minimum height=0.8cm, below=0.6cm of input] (enc) {Encoder};
+                \node[draw, rounded corners, fill=SYSUGreen!15, minimum width=2.8cm, minimum height=0.8cm, below=0.6cm of input] (enc) {Encoder};
                 \node[draw, rounded corners, fill=AccentBlue!10, minimum width=2.8cm, minimum height=0.8cm, below=0.6cm of enc] (latent) {Latent Space};
-                \node[draw, rounded corners, fill=THUPurple!15, minimum width=2.8cm, minimum height=0.8cm, below=0.6cm of latent] (dec) {Decoder};
+                \node[draw, rounded corners, fill=SYSUGreen!15, minimum width=2.8cm, minimum height=0.8cm, below=0.6cm of latent] (dec) {Decoder};
                 \node[draw, rounded corners, fill=AccentBlue!10, minimum width=2.8cm, minimum height=0.8cm, below=0.6cm of dec] (output) {Output};
                 \draw[-{Stealth}, thick] (input) -- (enc);
                 \draw[-{Stealth}, thick] (enc) -- (latent);
@@ -419,7 +422,7 @@
                     \foreach \x in {0,...,5} {
                         \pgfmathsetmacro{\val}{rnd*100}
                         \pgfmathsetmacro{\clr}{\val/100*80}
-                        \fill[THUPurple!\clr] (\x,\y) rectangle (\x+1,\y+1);
+                        \fill[SYSUGreen!\clr] (\x,\y) rectangle (\x+1,\y+1);
                         \draw[white, very thin] (\x,\y) rectangle (\x+1,\y+1);
                     }
                 }
@@ -437,7 +440,7 @@
         box/.style={draw, rounded corners, fill=AccentBlue!8,
                     minimum width=2.5cm, minimum height=0.8cm,
                     font=\small, align=center},
-        decision/.style={draw, diamond, fill=THUPurple!12,
+        decision/.style={draw, diamond, fill=SYSUGreen!12,
                     minimum width=1.5cm, minimum height=0.8cm,
                     font=\small, align=center, aspect=2},
         arr/.style={-{Stealth}, thick, AccentBlue}
@@ -548,7 +551,7 @@ for epoch in range(100):
         {\Huge\bfseries Thank You!}\\[0.8cm]
         {\Large Questions are welcome.}\\[1cm]
         {\normalsize
-            \textcolor{AccentBlue}{\textbf{Email}}: your.email@mails.tsinghua.edu.cn\\[0.3cm]
+            \textcolor{AccentBlue}{\textbf{Email}}: your.email@mail.sysu.edu.cn\\[0.3cm]
             \textcolor{AccentBlue}{\textbf{GitHub}}: \url{https://github.com/your-username}
         }
     \end{center}
