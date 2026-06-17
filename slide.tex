@@ -68,13 +68,33 @@
 
   \ifXeTeX
     \usepackage{xeCJK}
-    \IfFontExistsTF{Microsoft YaHei}{
-      \setCJKmainfont{Microsoft YaHei}[ItalicFont=*,ItalicFeatures={FakeSlant=0.2}]
-      \setCJKsansfont{Microsoft YaHei}[ItalicFont=*,ItalicFeatures={FakeSlant=0.2}]
+    \IfFileExists{C:/Windows/Fonts/msyh.ttc}{
+      \setCJKmainfont{msyh.ttc}[
+        Path = C:/Windows/Fonts/,
+        BoldFont = msyhbd.ttc,
+        ItalicFont = msyh.ttc,
+        BoldItalicFont = msyhbd.ttc,
+        ItalicFeatures = {FakeSlant=0.2},
+        BoldItalicFeatures = {FakeSlant=0.2}
+      ]
+      \setCJKsansfont{msyh.ttc}[
+        Path = C:/Windows/Fonts/,
+        BoldFont = msyhbd.ttc,
+        ItalicFont = msyh.ttc,
+        BoldItalicFont = msyhbd.ttc,
+        ItalicFeatures = {FakeSlant=0.2},
+        BoldItalicFeatures = {FakeSlant=0.2}
+      ]
+      \setCJKmonofont{msyh.ttc}[Path = C:/Windows/Fonts/]
     }{
-      \IfFontExistsTF{SimSun}{
-        \setCJKmainfont{SimSun}
-      }{}
+      \IfFontExistsTF{Microsoft YaHei}{
+        \setCJKmainfont{Microsoft YaHei}[ItalicFont=*,ItalicFeatures={FakeSlant=0.2}]
+        \setCJKsansfont{Microsoft YaHei}[ItalicFont=*,ItalicFeatures={FakeSlant=0.2}]
+      }{
+        \IfFontExistsTF{SimSun}{
+          \setCJKmainfont{SimSun}
+        }{}
+      }
     }
   \fi
 \fi
@@ -111,6 +131,7 @@
 % --- Fill in your info here ------------------------------------------------
 \newcommand{\authorname}{Your Name}          % <-- change this
 \newcommand{\institutename}{Sun Yat-sen University} % <-- and this
+\newcommand{\supervisorname}{刘教授}
 \author[\authorname]{\authorname}
 \title[Short Title]{Your Presentation Title}
 \institute{\institutename}
@@ -214,7 +235,7 @@
   \title[Short Title]%
         {Your Presentation Title\\with a Subtitle Line}
   \author[\authorname]{\authorname\hspace{0.9em}\textbar\hspace{0.9em}\today}
-  \institute[\institutename]{\institutename\\ Supervisor: Prof.\ Someone}
+  \institute[\institutename]{\institutename\\ Supervisor: \supervisorname}
   \date{}
   \titlegraphic{\includegraphics[width=0.18\linewidth]{sysu_logo.png}}
   \begin{frame}
